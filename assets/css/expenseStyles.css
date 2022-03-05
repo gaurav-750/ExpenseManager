@@ -1,0 +1,112 @@
+body{
+    background-color: aliceblue;
+}
+
+#heading{
+    text-align: center;
+    font-size: 3rem;
+    margin: 2rem;
+    font-family: cursive;
+    color: #151D3B;
+}
+
+.expenses-div{
+    /* border: 1px solid blue; */
+    width: 30%;
+    position: relative;
+    left: 35%;
+    display: inline-block;
+}
+
+#dateAmountTitleDiv{
+    border: none;
+}
+
+#date{
+    color: #D82148;
+    position: relative;
+    left: 10%;
+}
+
+#amount{
+    color: #D82148;
+    /* border: 1px solid orange; */
+    position: relative;
+    right: 10%;
+}
+
+.individual-expense{
+    border: 1px solid brown;
+    margin: 5px;
+    padding: 7px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.expense-info{
+    /* border: .5px solid black; */
+    flex-grow: 2;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.individual-expense span{
+    font-size: 1.7rem;
+}
+
+.delete-button{
+    /* border: 1px solid blue; */
+    height: 1.7rem;
+    width: 27px;
+    margin-left: 1rem;
+    margin-top: 2px;
+}
+
+#total-amount{
+    /* border: 1px solid red; */
+    background-color: antiquewhite;
+    font-size: 1.5rem;
+    text-align: center;
+    width: 17%;
+    position: relative; 
+    left: 46%; 
+    margin: 1rem;
+    padding: 5px;
+}
+
+form{
+    /* border: 1px solid blue; */
+    text-align: center;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: stretch;
+    padding: 5px;
+}
+
+form input{
+    font-size: 1.1rem;
+    margin: 5px;
+}
+
+form button{
+    font-size: 1rem;
+    color: #361500;
+    font-family: cursive;
+    font-weight: bold;
+    width: 20%;
+    margin: 5px;
+    position: relative;
+    left: 39%;
+}
+
+#form-div{
+    background-color: #74959A;
+    width: 20%;
+    display: inline-block;
+    position: fixed;
+    top: 25%;
+}

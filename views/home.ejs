@@ -1,0 +1,53 @@
+<html>
+    <head>
+        <title>
+            My Expenses
+        </title>
+
+
+        <link rel="stylesheet" href="/css/expenseStyles.css">
+        <!-- <script src="https://use.fontawesome.com/e4337e4185.js"></script> -->
+    </head>
+    <body>
+
+        <h1 id="heading"> My Expense Manager </h1>
+
+        <div class="expenses-div">
+            <div id="dateAmountTitleDiv" class="individual-expense">
+                <span id="date"> Date </span>
+                <span id="amount"> Amount </span>
+            </div>
+
+            <% for (let i of expense_list) { %>
+                <div class="individual-expense">
+
+                    <div class="expense-info">
+                        <span> <%= i.date %> </span>
+                        <span class="individual-amount"> <%= i.amount %> </span>
+                    </div>
+                    <!-- delete button -->
+                    <div class="delete-button">
+                        <a href="/deleteExpense/<%= i._id %>">
+                           <img src="/css/Images/rectangle-xmark-solid.svg" alt="">
+                        </a>
+                    </div>
+                </div>
+            <% } %>
+        </div>
+
+        <div id="total-amount">
+            <span> Total Amount: <%= locals.total %> </span>
+        </div>
+
+        <!-- Form for taking User input: -->
+        <div id="form-div">
+            <form action="/addExpenses" method="post">
+                <input type="date" name="inputDate" placeholder="date">
+                <input type="number" name="inputAmount" id="" placeholder="Enter amount">
+    
+                <button type="submit"> Add </button>
+            </form>
+        </div>
+        
+    </body>
+</html>
